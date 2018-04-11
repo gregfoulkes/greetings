@@ -20,74 +20,74 @@ function greetNameValue(){
 var person = nameValue.value
 return person
 }
-var greetNumber = 0
+
 
 function greetFunction(){
+
+var greetNumber = 0;
+var thePerson = '';
+var languages = '';
 
   function greetMe(person){
 
     if(person != ''){
-      var thePerson = ""
       thePerson = person
-
+      greetNumber++
     }
+
     return thePerson
   }
 
 
 
   function greetCounter(){
-      greetNumber = greetNumber+1;
+    console.log(greetNumber);
     return greetNumber;
     }
-  //var greetType = ''
+
+    // function greetReturn(){
+    //   return n
+    // }
+
   function languageSelect(type){
 
 
       if(type === "english"){
-        type = 'Hello'
+        languages = 'Hello'
       }
 
       if(type === "afrikaans"){
-        type = 'More'
+        languages = 'Goie More'
       }
 
       if(type === 'xhosa'){
-        type = 'Molo'
+        languages = 'Molo'
       }
-      return type
-    }
 
+      return languages
+    }
+  //  greetCounter()
   return{
+    //returned: greetReturn,
     language: languageSelect,
-    greet: greetMe,
-    greetCount: greetCounter,
+    greetPerson: greetMe,
+    greetCountNumber: greetCounter,
   }
 }
 
+var greetVariable = greetFunction()
 
-function displayName(){
-  var greetVariable = greetFunction()
-  var gn = greetVariable.greet(greetNameValue())
-  var gt = greetVariable.language(btnRadioCheck())
-  nameDisplay.innerHTML = gt + ' ' + gn
-
-
+function displayNameandCount(){
+  var displayGreetPerson = greetVariable.greetPerson(greetNameValue())
+  var displayCountNumber = greetVariable.language(btnRadioCheck())
+  nameDisplay.innerHTML = displayCountNumber + ' ' + displayGreetPerson
+  displayCount.innerHTML = greetVariable.greetCountNumber()
 }
 
-function displayCounter(){
-   var greetVariable = greetFunction()
-  displayCount.innerHTML = greetVariable.greetCount()
-
-}
 
 
 
  greetBtn.addEventListener('click', function(){
    var greetVariable = greetFunction()
-
-  // greetFunction.greetCounter()
-   displayName()
-   displayCounter()
-   //greetVariable.greetCount()
+   displayNameandCount()
  });
