@@ -49,14 +49,32 @@ body {
 
 }
 
-.radioBtn{
-  margin: 5px;
+
+.counter {
+
   width:23%;
   float: left;
 }
 
+.buttons{
+  width: 100%;
+  float:left;
+  }
+
 .language{
-  width:100%;
+  width:30%;
+  float:left;
+}
+
+.radioBtn{
+  margin: 5px;
+  width:75%;
+  float: left;
+}
+
+.greetButton{
+  width:20%;
+  float: left;
 }
 
 .greetMeBtn{

@@ -6,35 +6,41 @@ var nameDisplay = document.querySelector('.displayName')
 
 var greetBtn = document.querySelector('.greetMeBtn')
 
-// function btnRadioCheck(){
-//   var checkedRadioBtn = document.querySelector("input[name='languageRadio']:checked");
-//     if (checkedRadioBtn){
-//       var greetingType = checkedRadioBtn.value
-//     }
-//   return greetingType
-// }
+var displayCount = document.querySelector('.counterDisplay')
+
+function btnRadioCheck(){
+  var checkedRadioBtn = document.querySelector("input[name='languageRadio']:checked");
+    if (checkedRadioBtn){
+      var greetingType = checkedRadioBtn.value
+    }
+  return greetingType
+}
+
 function greetMe(){
   var person = nameValue.value
-  console.log(person)
 
   if(person != ''){
     var thePerson = ""
-
     thePerson = person
   }
   return thePerson
-//  console.log(thePerson)
+}
+var greetNumber = 0
 
+function greetCounter(){
+  greetNumber++;
+  return greetNumber;
 }
 
 function displayName(thePerson){
-//greetMe()
+  var grt = greetCounter()
+  displayCount.innerHTML = grt
   nameDisplay.innerHTML = thePerson
-
 }
 
- greetBtn.addEventListener('click', function(){
 
+
+ greetBtn.addEventListener('click', function(){
    displayName(greetMe())
 
  })
