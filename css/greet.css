@@ -1,0 +1,71 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  left: 0;
+  top: 0;
+  font-size: 100%;
+}
+
+.container {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.center {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.nameBox{
+  width: 100%;
+  float: left;
+}
+
+.name{
+  width:25%;
+  float:left;
+}
+
+.greeting{
+  margin: 10px;
+  background: light-blue;
+  height: 200px;
+}
+
+.textInputBox{
+  height: 33%;
+  width: 50%;
+  float: left;
+}
+
+.textInputBox textarea {
+  width: 90%;
+
+}
+
+.radioBtn{
+  margin: 5px;
+  width:23%;
+  float: left;
+}
+
+.language{
+  width:100%;
+}
+
+.greetMeBtn{
+  margin: 20px;
+
+}
+
+.box {
+  content: "";
+  display: block;
+  clear: both;
+}

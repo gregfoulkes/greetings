@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Greetings Page</title>
+    <link rel="stylesheet" href="css/greet.css">
+  </head>
+  <body>
+    <div class="container">
+
+
+      <div class="center greeting ">
+        <h1>Greet</h1>
+      </div>
+
+
+      <div class="nameBox">
+
+        <div class="name">
+          <h1>Name</h1>
+        </div>
+
+        <div class="textInputBox ">
+          <textarea  name="greetInput" class = "greetName center" value = "" ></textarea>
+        </div>
+        <div class="radioBtn">
+          <div class="language">
+            <input type="radio" name="languageType" class="languageRadio" value="afrikaans">
+            <span class="label-body">Afrikaans</span>
+          </div>
+          <div class="language">
+            <input type="radio" name="languageType" class="languageRadio" value="english">
+            <span class="label-body">English</span>
+          </div>
+          <div class="language">
+            <input type="radio" name="languageType" class="languageRadio" value="xhosa">
+            <span class="label-body">Xhosa</span>
+          </div>
+        </div>
+      </div>
+        <button class="button-primary greetMeBtn" type="button" name="button">Greet</button>
+      <div class="displayField">
+        <strong>Hello:</strong>
+        <span class="nameOfPerson"><span class="displayName"></span></span>
+      </div>
+    </div>
+
+
+
+
+  </body>
+  <script src="js/greet.js"></script>
+</html>
