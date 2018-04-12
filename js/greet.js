@@ -1,25 +1,3 @@
-var languageValue = document.querySelector('.languageRadio')
-
-var nameValue = document.querySelector('.greetName')
-
-var nameDisplay = document.querySelector('.displayName')
-
-var greetBtn = document.querySelector('.greetMeBtn')
-
-var displayCount = document.querySelector('.counterDisplay')
-
-function btnRadioCheck(){
-  var checkedRadioBtn = document.querySelector("input[name='languageType']:checked");
-    if (checkedRadioBtn){
-      var greetingType = checkedRadioBtn.value
-    }
-  return greetingType
-}
-
-function greetNameValue(){
-var person = nameValue.value
-return person
-}
 
 
 function greetFunction(){
@@ -28,12 +6,23 @@ var greetNumber = 0;
 var thePerson = '';
 var languages = '';
 
-  function greetMe(person){
+var nameMap = {}
 
-    if(person != ''){
-      thePerson = person
+  function greetMe(value){
+
+    if(nameMap[value] === undefined){
+      thePerson = value
+      nameMap[value] = thePerson;
       greetNumber++
+      localStorage['greetNumber'] = Number(greetNumber)
+
+
     }
+
+    // if(person != ''){
+    //   thePerson = person
+    //   greetNumber++
+    // }
 
     return thePerson
   }
@@ -41,7 +30,7 @@ var languages = '';
 
 
   function greetCounter(){
-    console.log(greetNumber);
+  //  console.log(greetNumber);
     return greetNumber;
     }
 
@@ -57,7 +46,7 @@ var languages = '';
       }
 
       if(type === "afrikaans"){
-        languages = 'Goie More'
+        languages = 'More'
       }
 
       if(type === 'xhosa'){
@@ -74,20 +63,3 @@ var languages = '';
     greetCountNumber: greetCounter,
   }
 }
-
-var greetVariable = greetFunction()
-
-function displayNameandCount(){
-  var displayGreetPerson = greetVariable.greetPerson(greetNameValue())
-  var displayCountNumber = greetVariable.language(btnRadioCheck())
-  nameDisplay.innerHTML = displayCountNumber + ' ' + displayGreetPerson
-  displayCount.innerHTML = greetVariable.greetCountNumber()
-}
-
-
-
-
- greetBtn.addEventListener('click', function(){
-   var greetVariable = greetFunction()
-   displayNameandCount()
- });
