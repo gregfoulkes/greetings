@@ -2,7 +2,7 @@ var languageValue = document.querySelector('.languageRadio')
 
 var nameValue = document.querySelector('.greetName')
 
-var nameDisplay = document.querySelector('.displayName')
+var nameAndGreetingDisplay = document.querySelector('.displayName')
 
 var greetBtn = document.querySelector('.greetMeBtn')
 
@@ -26,13 +26,12 @@ return person
 
 function displayNameandCount(){
 
-  var displayGreetPerson = greetVariable.greetPerson(greetNameValue())
-  var displayCountNumber = greetVariable.language(btnRadioCheck())
-  nameDisplay.innerHTML = displayCountNumber + ' ' + displayGreetPerson
+  var displayGreetPerson = greetVariable.greetPerson(greetNameValue(),btnRadioCheck())
+
+  nameAndGreetingDisplay.innerHTML =  displayGreetPerson
   displayCount.innerHTML = greetVariable.greetCountNumber()
 }
 
  greetBtn.addEventListener('click', function(){
-  // var greetVariable = greetFunction()
    displayNameandCount()
  });
