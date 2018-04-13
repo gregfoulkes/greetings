@@ -10,6 +10,12 @@ var displayCount = document.querySelector('.counterDisplay')
 
 var greetVariable = greetFunction()
 
+function callStorage(){
+
+localStorage.setItem(greetCountNumber, 'greetNumber')
+
+}
+
 
 function btnRadioCheck(){
   var checkedRadioBtn = document.querySelector("input[name='languageType']:checked");

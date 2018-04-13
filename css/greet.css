@@ -7,6 +7,9 @@ body {
   left: 0;
   top: 0;
   font-size: 100%;
+  font-family: monospace;
+  font-style: normal;
+  font: courier;
 }
 
 .container {
@@ -24,7 +27,6 @@ body {
 
 .nameBox{
   width: 100%;
-  float: left;
 }
 
 .name{
@@ -32,10 +34,14 @@ body {
   float:left;
 }
 
+/* .name strong{
+  width:25%;
+} */
+
 .greeting{
   margin: 10px;
   background: light-blue;
-  height: 200px;
+  height: 50px;
 }
 
 .textInputBox{
@@ -46,12 +52,9 @@ body {
 
 .textInputBox textarea {
   width: 90%;
-
 }
 
-
 .counter {
-
   width:23%;
   float: left;
 }
@@ -59,6 +62,9 @@ body {
 .buttons{
   width: 100%;
   float:left;
+  font-family: monospace;
+  font-style: normal;
+  font: courier;
   }
 
 .language{
@@ -67,7 +73,7 @@ body {
 }
 
 .radioBtn{
-  margin: 5px;
+  margin-top: 25px;
   width:75%;
   float: left;
 }
@@ -81,6 +87,21 @@ body {
   margin: 20px;
 
 }
+
+.displayField{
+  margin-left: 7%;
+  float: left;
+}
+
+/* .displayName{
+  width: 80%;
+  float: left;
+} */
+
+/* .spacerForDisplayField {
+  width:20%;
+  float: left;
+} */
 
 .box {
   content: "";

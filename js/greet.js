@@ -20,15 +20,15 @@ var nameMap = {}
     }
 
     if(type === "english"){
-      languages = 'Hello'
+      languages = 'Hello,'
     }
 
     if(type === "afrikaans"){
-      languages = 'More'
+      languages = 'More,'
     }
 
     if(type === 'xhosa'){
-      languages = 'Molo'
+      languages = 'Molo,'
     }
 
     return languages + ' ' + thePerson
@@ -38,8 +38,13 @@ var nameMap = {}
     return greetNumber;
     }
 
-  return{
+  function greetMap(){
+    return nameMap
+  }
 
+  return{
+    
+    map: nameMap,
     greetPerson: greetMe,
     greetCountNumber: greetCounter,
 
