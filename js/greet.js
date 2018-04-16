@@ -1,4 +1,4 @@
-function greetFunction(storedData){
+function greetFunction(storedUsers){
 var greetNumber = 0;
 var thePerson = '';
 var languages = '';
@@ -11,8 +11,8 @@ var  nameMap = {}
       thePerson = name
     }
 
-    if (storedData){
-      nameMap = storedData
+    if (storedUsers){
+      nameMap = storedUsers
     }
 
     if(nameMap[thePerson] === undefined){
@@ -20,7 +20,6 @@ var  nameMap = {}
      nameMap[thePerson] = 0;
     }
 
-    console.log(storedUsers)
 
     if(type === "english"){
       languages = 'Hello,'
@@ -37,11 +36,11 @@ var  nameMap = {}
     return languages + ' ' + thePerson
 }
 
-  function greetCounter(){
+  function greetCounter(storedUsers){
     return Object.keys(nameMap).length;
     }
 
-  function greetMap(){
+  function greetMap(storedUsers){
     return nameMap
   }
 

@@ -29,10 +29,9 @@ return person
 }
 
 function displayNameandCount(){
-  console.log(greetVariable)
+  //console.log(greetVariable)
 
   var displayGreetPerson = greetVariable.greetPerson(greetNameValue(),btnRadioCheck())
-  var userType =
 
   localStorage.setItem('user', JSON.stringify( greetVariable.map()));
   console.log(greetVariable)
@@ -47,5 +46,5 @@ function displayNameandCount(){
  });
 
 resetBtn.addEventListener('click', function(){
-
+  localStorage.clear()
 });

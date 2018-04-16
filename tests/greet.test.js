@@ -51,4 +51,14 @@ describe ('greetCounter Function', function(){
 
     assert.equal(callGreetFunction.greetPerson('Ross','afrikaans'), 'More, Ross')
   });
+
+  // it ('Should return More Ross',function(){
+  //
+  //   var callGreetFunction = greetFunction()
+  //   callGreetFunction.greetPerson('Ross','afrikaans')
+  //   callGreetFunction.greetPerson('Luvuyo','afrikaans')
+  //   callGreetFunction.greetPerson('Aya','afrikaans')
+  //
+  //   assert.equal(callGreetFunction.map(), { Ross: 0, Luvuyo: 0, Aya: 0 })
+  // });
 });
