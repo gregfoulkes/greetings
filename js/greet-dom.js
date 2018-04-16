@@ -35,6 +35,5 @@ function displayNameandCount(){
 }
 
  greetBtn.addEventListener('click', function(){
-   //callStorage()
    displayNameandCount()
  });

@@ -2,7 +2,6 @@ function greetFunction(storedUsers){
 var greetNumber = 0;
 var thePerson = '';
 var languages = '';
-
 var  nameMap = {}
 
   function greetMe(name,type){
