@@ -1,4 +1,4 @@
-function greetFunction(storedUsers){
+function greetFunction(storedData){
 var greetNumber = 0;
 var thePerson = '';
 var languages = '';
@@ -11,8 +11,8 @@ var  nameMap = {}
       thePerson = name
     }
 
-    if (storedUsers){
-      nameMap = storedUsers
+    if (storedData){
+      nameMap = storedData
     }
 
     if(nameMap[thePerson] === undefined){

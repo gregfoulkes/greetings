@@ -40,7 +40,7 @@ body {
 
 .greeting{
   margin: 10px;
-  background: light-blue;
+  background-color: #f1f1f1;
   height: 50px;
 }
 
@@ -107,7 +107,7 @@ body {
 } */
 
 .spacerForDisplayField {
-  background-color: grey;
+  background-color: #f1f1f1;
   margin:20px;
   width:72%;
   float: left;
