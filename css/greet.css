@@ -84,14 +84,14 @@ body {
 
 .resetButton {
   width:10%;
-  float: right;
+  float: left;
+
 }
 
 .greetMeBtn{
   margin: 20px;
 }
 .resetTheBtn{
-  float:right;
   margin: 20px;
 }
 
@@ -107,8 +107,9 @@ body {
 } */
 
 .spacerForDisplayField {
+  background-color: grey;
   margin:20px;
-  width:75%;
+  width:72%;
   float: left;
 }
 
