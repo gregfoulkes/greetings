@@ -5,7 +5,7 @@ var languages = '';
 var  nameMap = {}
 
   function greetMe(name,type){
-    console.log(storedUsers)
+  //  console.log(storedUsers)
 
     if(name != ''){
       thePerson = name
@@ -20,6 +20,7 @@ var  nameMap = {}
      nameMap[thePerson] = 0;
     }
 
+    console.log(storedUsers)
 
     if(type === "english"){
       languages = 'Hello,'

@@ -8,9 +8,12 @@ var greetBtn = document.querySelector('.greetMeBtn')
 
 var displayCount = document.querySelector('.counterDisplay')
 
+var resetBtn = document.querySelector('.resetTheBtn')
+
 var storedUsers = localStorage.getItem('nameMap') ? JSON.parse(localStorage.getItem('nameMap')): {};
 
 var greetVariable = greetFunction(storedUsers)
+
 
 function btnRadioCheck(){
   var checkedRadioBtn = document.querySelector("input[name='languageType']:checked");
@@ -26,9 +29,14 @@ return person
 }
 
 function displayNameandCount(){
-  var displayGreetPerson = greetVariable.greetPerson(greetNameValue(),btnRadioCheck())
+  console.log(greetVariable)
 
-  localStorage.setItem('user', JSON.stringify(greetVariable.map()))
+  var displayGreetPerson = greetVariable.greetPerson(greetNameValue(),btnRadioCheck())
+  var userType =
+
+  localStorage.setItem('user', JSON.stringify( greetVariable.map()));
+  console.log(greetVariable)
+
 
   nameAndGreetingDisplay.innerHTML =  displayGreetPerson
   displayCount.innerHTML = greetVariable.greetCountNumber()
@@ -37,3 +45,7 @@ function displayNameandCount(){
  greetBtn.addEventListener('click', function(){
    displayNameandCount()
  });
+
+resetBtn.addEventListener('click', function(){
+
+});
