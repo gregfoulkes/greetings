@@ -10,7 +10,9 @@ var displayCount = document.querySelector('.counterDisplay')
 
 var resetBtn = document.querySelector('.resetTheBtn')
 
-var storedUsers = localStorage.getItem('nameMap') ? JSON.parse(localStorage.getItem('nameMap')): {};
+var users = localStorage.getItem('users');
+
+var storedUsers = users ? JSON.parse(users): {};
 
 var greetVariable = greetFunction(storedUsers)
 
@@ -29,12 +31,10 @@ return person
 }
 
 function displayNameandCount(){
-  //console.log(greetVariable)
 
   var displayGreetPerson = greetVariable.greetPerson(greetNameValue(),btnRadioCheck())
 
-  localStorage.setItem('user', JSON.stringify( greetVariable.map()));
-  console.log(greetVariable)
+  localStorage.setItem('users', JSON.stringify( greetVariable.map()));
 
 
   nameAndGreetingDisplay.innerHTML =  displayGreetPerson
