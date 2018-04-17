@@ -8,11 +8,9 @@
   <body>
     <div class="container">
 
-
       <div class="center greeting ">
         <h1>Greet</h1>
       </div>
-
 
       <div class="nameBox center">
 
@@ -23,43 +21,54 @@
         <div class="textInputBox">
           <textarea  name="greetInput" class = "greetName " value = "" ></textarea>
         </div>
+
         <div class="counter">
           <strong>Number:</strong>
-          <span class="counterNameDisplay"><span class="counterDisplay" value = ""></span></span>
+          <span class="counterNameDisplay"><span class="counterDisplay" value = "" ></span></span>
         </div>
       </div>
-      <div class="buttons center">
+      <div class="radioButtons center">
+
         <div class="radioBtn center">
-          <div class="language">
+
+          <div class="language center">
             <input type="radio" name="languageType" class="languageRadio" value="afrikaans">
             <span class="label-body">Afrikaans</span>
           </div>
-          <div class="language">
+
+          <div class="language center">
             <input type="radio" name="languageType" class="languageRadio" value="english">
             <span class="label-body">English</span>
           </div>
-          <div class="language">
+
+          <div class="language center">
             <input type="radio" name="languageType" class="languageRadio" value="xhosa">
             <span class="label-body">isiXhosa</span>
           </div>
+
         </div>
       </div>
-      <div class="displayField">
-        <div class="greetButton">
-          <button class="greetMeBtn" type="button" name="button">Greet</button>
-        </div>
-        <div class = 'spacerForDisplayField'>
+
+      <div class="displayField center">
+
+        <div class = 'spacerForDisplayField '>
           <span class="nameOfPerson"><span class="displayName"></span></span>
         </div>
-        <div class="resetButton">
+
+      </div>
+
+      <div class="clickButtons center ">
+
+        <div class="greetButton ">
+          <button class="greetMeBtn" type="button" name="button">Greet</button>
+        </div>
+
+        <div class="resetButton ">
           <button class="resetTheBtn" type="button" name="button">Reset</button>
         </div>
 
       </div>
     </div>
-
-
-
 
   </body>
   <script src="js/greet.js"></script>
