@@ -16,6 +16,9 @@ var storedUsers = users ? JSON.parse(users): {};
 
 var greetVariable = greetFunction(storedUsers)
 
+if (nameValue.value === "" || !checkedRadioBtn){
+  nameAndGreetingDisplay.innerHTML = 'Enter a Name'
+}
 
 function btnRadioCheck(){
   var checkedRadioBtn = document.querySelector("input[name='languageType']:checked");
