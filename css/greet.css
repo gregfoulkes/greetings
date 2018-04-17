@@ -97,10 +97,22 @@ body {
 }
 
 .greetMeBtn{
-  margin: 20px;
+  /* font-size: 20px; */
+   font: courier;
+   font-family: monospace;
+   border-radius:5px;
+   width:100px;
+   height: 50px;
+   margin: 10px;
 }
 .resetTheBtn{
-  margin: 20px;
+  /* font-size: 20px; */
+   font: courier;
+   font-family: monospace;
+   border-radius:5px;
+   width:100px;
+   height: 50px;
+   margin: 10px;
 }
 
 .displayField{
