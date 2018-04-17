@@ -22,19 +22,21 @@ var  nameMap = {}
 
 
     if(type === "english"){
-      languages = 'Hello,'
+      languages = 'Hello, ' + thePerson
     }
 
     if(type === "afrikaans"){
-      languages = 'More,'
+      languages = 'More, ' + thePerson
     }
 
     if(type === 'xhosa'){
-      languages = 'Molo,'
+      languages = 'Molo, ' + thePerson
     }
-
-    return languages + ' ' + thePerson
 }
+
+  function returnGreet(){
+    return languages
+  }
 
   function greetCounter(storedUsers){
     return Object.keys(nameMap).length;
@@ -46,6 +48,7 @@ var  nameMap = {}
 
   return{
 
+    greeting: returnGreet,
     map: greetMap,
     greetPerson: greetMe,
     greetCountNumber: greetCounter,

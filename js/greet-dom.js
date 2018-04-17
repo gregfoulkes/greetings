@@ -14,7 +14,9 @@ var users = localStorage.getItem('users');
 
 var storedUsers = users ? JSON.parse(users): {};
 
-var greetVariable = greetFunction(storedUsers)
+displayCount.innerHTML =  Object.keys(storedUsers).length;
+
+var greetFactoryFunction = greetFunction(storedUsers)
 
 if (nameValue.value === "" || !checkedRadioBtn){
   nameAndGreetingDisplay.innerHTML = 'Enter a Name'
@@ -35,13 +37,17 @@ return person
 
 function displayNameandCount(){
 
-  var displayGreetPerson = greetVariable.greetPerson(greetNameValue(),btnRadioCheck())
+   greetFactoryFunction.greetPerson(greetNameValue(),btnRadioCheck())
 
-  localStorage.setItem('users', JSON.stringify( greetVariable.map()));
+  localStorage.setItem('users', JSON.stringify( greetFactoryFunction.map()));
 
 
-  nameAndGreetingDisplay.innerHTML =  displayGreetPerson
-  displayCount.innerHTML = greetVariable.greetCountNumber()
+  nameAndGreetingDisplay.innerHTML =  greetFactoryFunction.greeting()
+  displayCount.innerHTML = greetFactoryFunction.greetCountNumber()
+
+  if (nameValue.value === ""){
+    nameAndGreetingDisplay.innerHTML = 'Enter a Name'
+  }
 }
 
  greetBtn.addEventListener('click', function(){
