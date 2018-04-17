@@ -34,22 +34,25 @@ describe ('greetCounter Function', function(){
   it ('Should return Hello Andre',function(){
 
     var callGreetFunction = greetFunction()
-
-    assert.equal(callGreetFunction.greetPerson('Andre','english'), 'Hello, Andre')
+    callGreetFunction.greetPerson('Andre','english')
+    assert.equal(callGreetFunction.greeting(), 'Hello, Andre')
   });
 
   it ('Should return Molo Ayabonga',function(){
 
     var callGreetFunction = greetFunction()
 
-    assert.equal(callGreetFunction.greetPerson('Ayabonga','xhosa'), 'Molo, Ayabonga')
+    callGreetFunction.greetPerson('Ayabonga','xhosa')
+
+    assert.equal(callGreetFunction.greeting(), 'Molo, Ayabonga')
   });
 
   it ('Should return More Ross',function(){
 
     var callGreetFunction = greetFunction()
+    callGreetFunction.greetPerson('Ross','afrikaans')
 
-    assert.equal(callGreetFunction.greetPerson('Ross','afrikaans'), 'More, Ross')
+    assert.equal(callGreetFunction.greeting(), 'More, Ross')
   });
 
   // it ('Should return More Ross',function(){
