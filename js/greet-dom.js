@@ -18,39 +18,39 @@ displayCount.innerHTML =  Object.keys(storedUsers).length;
 
 var greetFactoryFunction = greetFunction(storedUsers)
 
-if (nameValue.value === "" || !checkedRadioBtn){
-  nameAndGreetingDisplay.innerHTML = 'Enter a Name'
-}
+nameAndGreetingDisplay.innerHTML = 'Enter a Name'
 
-function btnRadioCheck(){
-  var checkedRadioBtn = document.querySelector("input[name='languageType']:checked");
-    if (checkedRadioBtn){
-      var greetingType = checkedRadioBtn.value
-    }
-  return greetingType
-}
 
-function greetNameValue(){
-var person = nameValue.value
-return person
-}
 
 function displayNameandCount(){
 
-   greetFactoryFunction.greetPerson(greetNameValue(),btnRadioCheck())
+  var checkedRadioBtn = document.querySelector("input[name='languageType']:checked");
 
-  localStorage.setItem('users', JSON.stringify( greetFactoryFunction.map()));
+  if (checkedRadioBtn){
+  var greetingType = checkedRadioBtn.value
+  }
+
+  var person = nameValue.value
+
+   greetFactoryFunction.greetPerson(person, greetingType)
+
+   localStorage.setItem('users', JSON.stringify( greetFactoryFunction.map()));
 
 
-  nameAndGreetingDisplay.innerHTML =  greetFactoryFunction.greeting()
-  displayCount.innerHTML = greetFactoryFunction.greetCountNumber()
+    nameAndGreetingDisplay.innerHTML =  greetFactoryFunction.greeting()
+    displayCount.innerHTML = greetFactoryFunction.greetCountNumber()
 
   if (nameValue.value === ""){
-    nameAndGreetingDisplay.innerHTML = 'Enter a Name'
+    nameAndGreetingDisplay.innerHTML = 'Please Enter a Name'
   }
+
+  if (!checkedRadioBtn){
+    nameAndGreetingDisplay.innerHTML = 'Please Select a Language'
+  }
+
 }
 
- greetBtn.addEventListener('click', function(){
+greetBtn.addEventListener('click', function(){
    displayNameandCount()
  });
 
