@@ -16,10 +16,12 @@ function greetFunction(storedUsers){
       nameMap = storedUsers
     }
 
+    if(thePerson !== ""){
+
     if(nameMap[thePerson] === undefined){
 
      nameMap[thePerson] = 0;
-    }
+   }}
 
 
     if(type === "english"){
@@ -46,6 +48,9 @@ function greetFunction(storedUsers){
   function greetMap(storedUsers){
     return nameMap
   }
+  function resetMap(){
+    return nameMap ={};
+  }
 
   return{
 
@@ -53,6 +58,7 @@ function greetFunction(storedUsers){
     map: greetMap,
     greetPerson: greetMe,
     greetCountNumber: greetCounter,
+    reset:resetMap
 
   }
 }

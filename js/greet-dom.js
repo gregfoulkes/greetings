@@ -55,5 +55,9 @@ function displayNameandCount(){
  });
 
 resetBtn.addEventListener('click', function(){
-  localStorage.clear()
+  localStorage.clear();
+  displayCount.innerHTML = 0;
+  greetFactoryFunction.reset()
+  location.reload();
+
 });

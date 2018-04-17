@@ -1,5 +1,5 @@
 describe ('greetCounter Function', function(){
-  it ('Should return 1',function(){
+  it ('Should return a greet count of 1',function(){
 
     var callGreetFunction = greetFunction()
 
@@ -9,7 +9,7 @@ describe ('greetCounter Function', function(){
     assert.equal(callGreetFunction.greetCountNumber(),1);
   });
 
-  it ('Should return 2',function(){
+  it ('Should return a greet count of 2',function(){
 
     var callGreetFunction = greetFunction()
 
@@ -19,7 +19,7 @@ describe ('greetCounter Function', function(){
     assert.equal(callGreetFunction.greetCountNumber(),2);
   });
 
-  it ('Should return 3',function(){
+  it ('Should return a greet count of 3',function(){
 
     var callGreetFunction = greetFunction()
 
@@ -31,14 +31,14 @@ describe ('greetCounter Function', function(){
     assert.equal(callGreetFunction.greetCountNumber(),3);
   });
 
-  it ('Should return Hello Andre',function(){
+  it ('Should greet Andre in English and return Hello Andre',function(){
 
     var callGreetFunction = greetFunction()
     callGreetFunction.greetPerson('Andre','english')
     assert.equal(callGreetFunction.greeting(), 'Hello, Andre')
   });
 
-  it ('Should return Molo Ayabonga',function(){
+  it ('Should greet Ayabonga in Xhosa and return Molo Ayabonga',function(){
 
     var callGreetFunction = greetFunction()
 
@@ -47,7 +47,7 @@ describe ('greetCounter Function', function(){
     assert.equal(callGreetFunction.greeting(), 'Molo, Ayabonga')
   });
 
-  it ('Should return More Ross',function(){
+  it ('Should greet Ross in Afrikaans and return More Ross',function(){
 
     var callGreetFunction = greetFunction()
     callGreetFunction.greetPerson('Ross','afrikaans')
@@ -55,13 +55,13 @@ describe ('greetCounter Function', function(){
     assert.equal(callGreetFunction.greeting(), 'More, Ross')
   });
 
-  // it ('Should return More Ross',function(){
-  //
-  //   var callGreetFunction = greetFunction()
-  //   callGreetFunction.greetPerson('Ross','afrikaans')
-  //   callGreetFunction.greetPerson('Luvuyo','afrikaans')
-  //   callGreetFunction.greetPerson('Aya','afrikaans')
-  //
-  //   assert.equal(callGreetFunction.map(), { Ross: 0, Luvuyo: 0, Aya: 0 })
-  // });
+  it ('Should return map { Ross: 0, Luvuyo: 0, Aya: 0 }',function(){
+
+    var callGreetFunction = greetFunction()
+    callGreetFunction.greetPerson('Ross','afrikaans')
+    callGreetFunction.greetPerson('Luvuyo','xhosa')
+    callGreetFunction.greetPerson('Aya','english')
+
+    assert.deepEqual(callGreetFunction.map(), { Ross: 0, Luvuyo: 0, Aya: 0 })
+  });
 });
