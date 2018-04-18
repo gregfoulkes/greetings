@@ -76,7 +76,7 @@ body {
   }
 
 .language{
-  width:30%;
+  width:33%;
   float:left;
 }
 
@@ -115,28 +115,28 @@ body {
    margin: 10px;
 }
 
-.displayField{
-  width: 100%;
+/* .spaceForDisplayField{
+  width: 10%;
   /* margin: 5px; */
-  float: left;
-}
+  /* float: left; */
+
 
 /* .displayName{
   width: 80%;
   float: left;
 } */
 
-.spacerForDisplayField {
+.DisplayField {
   padding: 12px;
   text-align: center;
   background-color: #f1f1f1;
   margin:20px;
-  width:90%;
+  width:80%;
   float: left;
 }
 
-.box {
+/* .box {
   content: "";
   display: block;
   clear: both;
-}
+} */
