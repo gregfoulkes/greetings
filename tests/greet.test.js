@@ -1,7 +1,7 @@
 describe ('greetCounter Function', function(){
   it ('Should return a greet count of 1',function(){
 
-    var callGreetFunction = greetFunction()
+    var callGreetFunction = GreetFunction()
 
     callGreetFunction.greetPerson('Greg')
     callGreetFunction.greetPerson('Greg')
@@ -11,7 +11,7 @@ describe ('greetCounter Function', function(){
 
   it ('Should return a greet count of 2',function(){
 
-    var callGreetFunction = greetFunction()
+    var callGreetFunction = GreetFunction()
 
     callGreetFunction.greetPerson('Andre')
     callGreetFunction.greetPerson('Greg')
@@ -21,7 +21,7 @@ describe ('greetCounter Function', function(){
 
   it ('Should return a greet count of 3',function(){
 
-    var callGreetFunction = greetFunction()
+    var callGreetFunction = GreetFunction()
 
     callGreetFunction.greetPerson('Andre')
     callGreetFunction.greetPerson('Greg')
@@ -33,14 +33,14 @@ describe ('greetCounter Function', function(){
 
   it ('Should greet Andre in English and return Hello Andre',function(){
 
-    var callGreetFunction = greetFunction()
+    var callGreetFunction = GreetFunction()
     callGreetFunction.greetPerson('Andre','english')
     assert.equal(callGreetFunction.greeting(), 'Hello, Andre')
   });
 
   it ('Should greet Ayabonga in Xhosa and return Molo Ayabonga',function(){
 
-    var callGreetFunction = greetFunction()
+    var callGreetFunction = GreetFunction()
 
     callGreetFunction.greetPerson('Ayabonga','xhosa')
 
@@ -49,7 +49,7 @@ describe ('greetCounter Function', function(){
 
   it ('Should greet Ross in Afrikaans and return More Ross',function(){
 
-    var callGreetFunction = greetFunction()
+    var callGreetFunction = GreetFunction()
     callGreetFunction.greetPerson('Ross','afrikaans')
 
     assert.equal(callGreetFunction.greeting(), 'More, Ross')
@@ -57,7 +57,7 @@ describe ('greetCounter Function', function(){
 
   it ('Should return map { Ross: 0, Luvuyo: 0, Aya: 0 }',function(){
 
-    var callGreetFunction = greetFunction()
+    var callGreetFunction = GreetFunction()
     callGreetFunction.greetPerson('Ross','afrikaans')
     callGreetFunction.greetPerson('Luvuyo','xhosa')
     callGreetFunction.greetPerson('Aya','english')
