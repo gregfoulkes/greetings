@@ -16,7 +16,7 @@ var storedUsers = users ? JSON.parse(users): {};
 
 displayCount.innerHTML =  Object.keys(storedUsers).length;
 
-var greetFactoryFunction = greetFunction(storedUsers)
+var greetFactoryFunction = GreetFunction(storedUsers)
 
 nameAndGreetingDisplay.innerHTML = 'Enter a Name'
 

@@ -1,9 +1,9 @@
-function greetFunction(storedUsers){
+function GreetFunction(storedUsers){
 
   var greetNumber = 0;
   var thePerson = '';
   var languages = '';
-  var  nameMap = {}
+  var nameMap = {}
 
   function greetMe(name,type){
   //  console.log(storedUsers)
@@ -21,7 +21,8 @@ function greetFunction(storedUsers){
     if(nameMap[thePerson] === undefined){
 
      nameMap[thePerson] = 0;
-   }}
+      }
+    }
 
 
     if(type === "english"){
@@ -49,7 +50,7 @@ function greetFunction(storedUsers){
     return nameMap
   }
   function resetMap(){
-    return nameMap ={};
+    return nameMap = {};
   }
 
   return{
@@ -58,7 +59,7 @@ function greetFunction(storedUsers){
     map: greetMap,
     greetPerson: greetMe,
     greetCountNumber: greetCounter,
-    reset:resetMap
+    reset:resetMap,
 
   }
 }
